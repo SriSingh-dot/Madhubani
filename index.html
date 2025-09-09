@@ -1,0 +1,359 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MadhuShri</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0fdf4;
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      line-height: 1.7;
+      border: 20px double #065f46;
+      outline: 15px solid #10b981;
+      box-shadow: inset 0 0 0 12px #34d399, inset 0 0 0 24px #6ee7b7;
+    }
+    header {
+      background: #d1fae5;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #065f46;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      text-decoration: underline;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #065f46;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #d1fae5, #a7f3d0);
+      border-bottom: 3px solid #065f46;
+    }
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      text-decoration: underline;
+    }
+    .hero p {
+      font-size: 20px;
+      max-width: 650px;
+      margin: 0 auto 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .btn-primary {
+      background: #059669;
+      color: white;
+    }
+    .btn-outline {
+      background: white;
+      border: 2px solid #059669;
+      color: #065f46;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+      gap: 30px;
+      border-bottom: 3px solid #065f46;
+    }
+    .feature-box {
+      background: #d1fae5;
+      padding: 20px;
+      border-radius: 12px;
+      width: 30%;
+      min-width: 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      text-align: center;
+      border: 2px solid #065f46;
+    }
+    .feature-box h3 {
+      text-decoration: underline;
+      color: #065f46;
+    }
+    .gallery {
+      background: #d1fae5;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 3px solid #065f46;
+    }
+    .gallery h2 {
+      margin-bottom: 30px;
+      font-size: 28px;
+      text-decoration: underline;
+    }
+    .gallery-images {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .gallery-images img {
+      width: 350px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery-images img:hover {
+      transform: scale(1.05);
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      flex-direction: column;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .close-btn {
+      color: white;
+      font-size: 28px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .about {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.8;
+      border-bottom: 3px solid #065f46;
+    }
+    .about h2 {
+      text-decoration: underline;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    .about-images {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .about-images img {
+      width: 500px;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .order {
+      background: #ecfdf5;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 3px solid #065f46;
+    }
+    .order h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-decoration: underline;
+    }
+    .order-table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 80%;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .order-table th, .order-table td {
+      border: 1px solid #d1d5db;
+      padding: 12px;
+      font-size: 18px;
+    }
+    .order-table th {
+      background: #10b981;
+      color: white;
+    }
+    .order p {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    footer {
+      background: #065f46;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    footer a {
+      color: #a7f3d0;
+      text-decoration: none;
+    }
+    #goUpBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #059669;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 2000;
+    }
+    #goUpBtn:hover {
+      background: #047857;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MadhuShri</h1>
+    <nav>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#order">Order</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>The Timeless Art of Madhubani</h2>
+    <p>Discover authentic Madhubani paintings, crafted with tradition and passion.</p>
+    <a href="#gallery"><button class="btn btn-primary">Explore Gallery</button></a>
+    <a href="#about"><button class="btn btn-outline">Learn More</button></a>
+  </section>
+
+  <section class="features">
+    <div class="feature-box">
+      <h3>Handcrafted</h3>
+      <p>Each piece is uniquely handmade by skilled artisans.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Authentic</h3>
+      <p>Traditional Madhubani techniques passed down for generations.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Cultural Heritage</h3>
+      <p>A timeless reflection of Indian folk art and stories.</p>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-images">
+      <img src="madhu1.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu2.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu3.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu4.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu5.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu6.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu7.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu8.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu9.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu10.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu11.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu12.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu13.jpg" onclick="openLightbox(this.src)">
+      <img src="madhu14.jpg" onclick="openLightbox(this.src)">
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="">
+    <span class="close-btn" onclick="closeLightbox()">× Close</span>
+  </div>
+
+  <section id="about" class="about">
+    <h2>About Madhubani Painting</h2>
+    <p>
+      Madhubani painting, also known as Mithila painting, is a traditional form of folk art that originated in the Mithila region of Bihar, India, and parts of Nepal. It is one of the oldest and most celebrated art forms of India, believed to date back to the time of the Ramayana when King Janaka commissioned artists to create paintings during the wedding of his daughter, Sita, to Lord Rama.
+      <br><br>
+      Traditionally, Madhubani paintings were made on freshly plastered mud walls of huts, but today they are also created on cloth, handmade paper, and canvas, making them accessible to a wider audience. These paintings are characterized by their vibrant colors, intricate patterns, and symbolic motifs. Artists usually use natural dyes and pigments derived from plants, flowers, and minerals, along with brushes made from twigs or even matchsticks.
+      <br><br>
+      Common themes include Hindu deities such as Krishna, Rama, Shiva, Durga, Lakshmi, and Saraswati, as well as scenes of nature, animals, birds, and geometric patterns. A distinctive feature of Madhubani art is the absence of blank space; the background is always filled with fine lines, floral designs, or other motifs, creating a sense of completeness and harmony. The style has different schools such as Bharni, Kachni, Tantrik, Godna, and Kohbar, each with its own unique techniques and significance.
+      <br><br>
+      Traditionally practiced by women of the region, this art form served as an expression of culture, rituals, and social values, often passed down from generation to generation. Today, Madhubani painting has gained global recognition, not only as a decorative art but also as a medium of cultural storytelling and environmental awareness. It reflects the deep connection between human life, nature, and spirituality, making it a timeless art form that continues to inspire artists and art lovers worldwide.
+    </p>
+    <div class="about-images">
+      <img src="mithila1.jpg" alt="Mithila Painting 1">
+      <img src="mithila2.jpg" alt="Mithila Painting 2">
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <h2>Order Paintings</h2>
+    <table class="order-table">
+      <tr>
+        <th>Painting Size</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>A5 Size Painting</td>
+        <td>₹750 (≈ $9)</td>
+      </tr>
+      <tr>
+        <td>A4 Size Painting</td>
+        <td>₹1000 (≈ $12)</td>
+      </tr>
+      <tr>
+        <td>A3 Size Painting</td>
+        <td>₹1500 (≈ $18)</td>
+      </tr>
+    </table>
+    <p><strong>Note:</strong> Price isn’t final. The final cost will include shipping charges.</p>
+  </section>
+
+  <footer>
+    <p>Contact: <a href="mailto:singhsrishti0908@gmail.com">singhsrishti0908@gmail.com</a></p>
+  </footer>
+
+  <button id="goUpBtn" onclick="scrollToTop()">↑ Go Up</button>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.onscroll = function() {
+      let btn = document.getElementById("goUpBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
