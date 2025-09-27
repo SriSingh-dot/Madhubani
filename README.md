@@ -19,8 +19,6 @@ HTML (HyperText Markup Language) → for structure/content of the webpage
 
 CSS (Cascading Style Sheets) → for styling, borders, colors, layout, responsiveness
 
-JavaScript → for interactivity (lightbox, "Go Up" button, smooth scroll)
-
 (i do not have that deep knowledge in any lang so i used basics of these lang to make the website
 and it took longer to figure out how to push this file to my repository than making it .....)
 
