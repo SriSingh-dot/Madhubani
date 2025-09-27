@@ -1,4 +1,5 @@
 # MadhuShri – The Timeless Art of Madhubani from Bihar
+THIS IS RESUBMISSION.EARLIER WHILE SUBMITTING THIS I PROVIDED A REVIEW LINK TO MY MESSAGE WHICH SAID THAT BECAUSE THIS WAS MY FIRST PROJECT WITH CORRECT USAGE OF HACKTIME AND VSCODE SO I ACTUALLY MADE SOME MISTAKE ON MY HACKTIME NEW PROJECT WAS ACTUALLY THE SAME THING BUT I LATER REALISED THAT I WAS DOING THIS WRONG. SO I CREATED MADHUBANI FOLDER .THAT IS WHY IN EARLIER SUBMISSION THERE WAS ONLY 30 MIN SHOWING ON MY HACKTIME BECAUSE I COPY PASTED FROM NEW FOLDER 
 Also i tried to do some cursor design change and stuff but its not working so ignore that i guess.
 MadhuShri is a simple, elegant website showcasing the **authentic beauty of Madhubani paintings**, also known as Mithila paintings.  
 It highlights the cultural heritage of India while offering visitors a way to explore, learn, and place orders for handcrafted artwork.  
