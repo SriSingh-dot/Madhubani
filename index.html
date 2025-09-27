@@ -4,28 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MadhuShri</title>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-
+ <link href="https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap');
+
+
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 18px;
-  line-height: 1.7;
+}
+
+
+body {
+  font-family: 'Great Vibes', cursive; 
+  font-size: 28px;
+  line-height: 1.8;
   background: url('aes1.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #4b2c2c;
   border: 15px double #663f3f;
   outline: 10px solid #ac1818;
   box-shadow: inset 0 0 0 5px #5e3131;
-  cursor: url('cursor.cur') 16 16, auto; 
+  cursor: url('cursor1.png') 16 16, auto;
 }
+
+
 .homepage-center {
   height: 100vh;
   display: flex;
@@ -35,8 +40,9 @@ body {
   text-align: center;
 }
 
+
 .homepage-center h1 {
-  font-family: "Allura", cursive;
+  font-family: 'Allura', cursive; 
   font-size: 120px;
   color: hsl(0, 27%, 19%);
   margin-bottom: 40px;
@@ -71,11 +77,14 @@ body {
   text-align: center;
 }
 
+
 .gallery h2, .about h2, .order h2 {
   margin-bottom: 30px;
-  font-size: 28px;
+  font-size: 32px;
   text-decoration: underline;
+  font-family: 'Great Vibes', cursive;
 }
+
 
 .gallery-images, .about-images, .order-images {
   display: flex;
@@ -84,64 +93,21 @@ body {
   flex-wrap: wrap;
 }
 
-.gallery-images img {
+.gallery-images img, .about-images img, .order-images img {
   width: 350px;
-  height: 400px;
+  height: 400px; 
   object-fit: cover;
   border: 5px solid #5c3333;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.about-images img {
-  width: 250px;
-  height: auto;
-  object-fit: cover;
-  border: 5px solid #5c3333;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-  cursor: pointer;
+.gallery-images img:hover, .about-images img:hover, .order-images img:hover {
+  transform: scale(1.05);
 }
 
-.order-images img {
-  width: 200px;
-  height: auto;
-  border: 5px solid #5c3333;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-  cursor: pointer;
-}
-
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  flex-direction: column;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 85%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-
-.close-btn {
-  color: white;
-  font-size: 28px;
-  margin-top: 10px;
-  cursor: pointer;
-  font-weight: bold;
-}
 
 .order-table {
   margin: auto;
@@ -151,38 +117,49 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Great Vibes', cursive;
 }
 
 .order-table th, .order-table td {
   border: 1px solid #d1d5db;
   padding: 12px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .order-table th {
-  background: hsl(293, 48%, 72%);
+  background: hwb(355 36% 27%);
   color: white;
 }
 
+
 footer {
-  background: #a67c52;
+  background: hsl(0, 40%, 60%);
   color: white;
   text-align: center;
   padding: 15px;
   margin-top: 20px;
+  font-family: 'Great Vibes', cursive;
 }
 
 footer a {
   color: white;
   text-decoration: none;
 }
+.order-images figure {
+  display: inline-block;
+  text-align: center;
+}
+
+.order-images figcaption {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  margin-top: 8px;
+  color: #4b2c2c;
+}
 </style>
 
 
 
-
-</head>
-</style>
 
 </head>
 <body>
@@ -222,14 +199,13 @@ footer a {
   <section id="about" class="about">
     <h2>About Madhubani Painting</h2>
     <p>
-      Madhubani painting, also known as Mithila painting, is a traditional form of folk art that originated in the Mithila region of Bihar, India, and parts of Nepal. It is one of the oldest and most celebrated art forms of India, believed to date back to the time of the Ramayana when King Janaka commissioned artists to create paintings during the wedding of his daughter, Sita, to Lord Rama.
+     Madhubani painting is also known as Mithila painting,though people sometimes refer these two names as different art style.This painting was originated in the Mithila region of Bihar,India and some parts of Nepal and dates back to at least few thousand years-It is historically associated with King janaka,the father of Sita (Yes our lord Rama's wife).This painting used natural pigmenets and colours extracted from nature.
       <br><br>
-      Traditionally, Madhubani paintings were made on freshly plastered mud walls of huts, but today they are also created on cloth, handmade paper, and canvas, making them accessible to a wider audience. These paintings are characterized by their vibrant colors, intricate patterns, and symbolic motifs. Artists usually use natural dyes and pigments derived from plants, flowers, and minerals, along with brushes made from twigs or even matchsticks.
+    So we got green from green leaves of course,blue from indigo plants,white from lime, red from hematite and the most important of all of the colours (i mean the most disgusting)..YELLOW!!! Yes yellow was the most disgusting colour to make use and everything. I stilln wonder how artists use to paint using that disgusting yellow colour. In history Indians had a choice to make yellow from turmeric like any other country but NO!! They wanted the yellow to be more pignmented.
+      <br><br>                                        
+    These paintings were on mainly Gods and Goddesses,folklore and nature. Traditionally these paintings were done by the women of those regions on the walls of their homes during festivals,ceremonies and any special occasions.The theme often reveolved around the Hindu religion and the most drawn gods were Krishna,Rama,Sita,Ganesha and Durga.(and of course our Ganesha,he brings goodluck to everyone).The paintings were done using twigs,brushes,fingers and even matchsticks.
       <br><br>
-      Common themes include Hindu deities such as Krishna, Rama, Shiva, Durga, Lakshmi, and Saraswati, as well as scenes of nature, animals, birds, and geometric patterns. A distinctive feature of Madhubani art is the absence of blank space; the background is always filled with fine lines, floral designs, or other motifs, creating a sense of completeness and harmony. The style has different schools such as Bharni, Kachni, Tantrik, Godna, and Kohbar, each with its own unique techniques and significance.
-      <br><br>
-      Traditionally practiced by women of the region, this art form served as an expression of culture, rituals, and social values, often passed down from generation to generation. Today, Madhubani painting has gained global recognition, not only as a decorative art but also as a medium of cultural storytelling and environmental awareness. It reflects the deep connection between human life, nature, and spirituality, making it a timeless art form that continues to inspire artists and art lovers worldwide.
-    </p>
+    And after thousands of years now when pens were invented and brushes were made,these paintings were done directly on paper and cloth (which one also calls freehand drawing,if i am not wrong). These paintings look easy to draw and would draw your attention but when you start drawing,you will understand the pain (even a small part contains immense details and patience of the artist).</p>
     <div class="about-images">
       <img src="mithila1.jpg" alt="Mithila Painting 1">
       <img src="mithila2.jpg" alt="Mithila Painting 2">
@@ -245,24 +221,29 @@ footer a {
       </tr>
       <tr>
         <td>A5 Size Painting</td>
-        <td>₹750 (≈ $9)</td>
+        <td>₹1000 (≈ $12.05)</td>
       </tr>
       <tr>
         <td>A4 Size Painting</td>
-        <td>₹1000 (≈ $12)</td>
+        <td>₹1500(≈ $18.07)</td>
       </tr>
       <tr>
         <td>A3 Size Painting</td>
-        <td>₹1500 (≈ $18)</td>
+        <td>₹2000 (≈ $24.10)</td>
       </tr>
     </table>
 
     <div class="order-images">
-      <img src="mum1.jpg" alt="Order Example 1">
-      <img src="mum2.jpg" alt="Order Example 2">
-    </div>
-
-    <p><strong>Note:</strong> Price isn’t final. The final cost will include shipping charges.</p>
+  <figure><!--sorry the photos are actually shot at night so got the flashlight in way-->
+    <img src="mum1.jpg" alt="Order Example 1">
+    <figcaption>It was made directly on ancient yellow cloth(by my mother)</figcaption>
+  </figure>
+  <figure>
+    <img src="mum2.jpg" alt="Order Example 2">
+    <figcaption>Direct pen use, learning stage of mine</figcaption>
+  </figure>
+</div>
+    <p><strong>Note:</strong> Price isn’t final. The final cost will include shipping charges to your desired location. Plus a bonus thank you gift.</p>
   </section>
 
   <footer>
