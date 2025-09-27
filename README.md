@@ -1,5 +1,5 @@
 # MadhuShri – The Timeless Art of Madhubani from Bihar
-
+Also i tried to do some cursor design change and stuff but its not working so ignore that i guess.
 MadhuShri is a simple, elegant website showcasing the **authentic beauty of Madhubani paintings**, also known as Mithila paintings.  
 It highlights the cultural heritage of India while offering visitors a way to explore, learn, and place orders for handcrafted artwork.  
 
@@ -8,10 +8,9 @@ Yes, my mother is a professional madhubani and mandala artist.
 ✨ Features
 - Responsive layout  
 - Hero section with call-to-action  
-- Gallery with lightbox image viewer  
+- Gallery with different paintings 
 - About section describing Madhubani art  
 - Order table with painting sizes and prices  
-- Back-to-top button for smooth scrolling  
 - Footer with contact details and tagline  
 
 coding lang i use:
